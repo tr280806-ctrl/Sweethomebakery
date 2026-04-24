@@ -1,0 +1,74 @@
+import TopBar from "../components/TopBar";
+import { MapPin, Phone, Camera } from "lucide-react";
+
+export default function AboutUs() {
+  return (
+    <div className="min-h-screen bg-background">
+      <TopBar showBack showSearch={false} />
+
+      <div className="px-5 pt-2">
+        <p className="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Về chúng tôi</p>
+        <h1 className="font-heading font-bold text-2xl leading-snug text-foreground">
+          Sweet Home – Trao gửi yêu<br />thương qua vị ngọt lành
+        </h1>
+        <p className="text-muted-foreground text-sm mt-4 leading-relaxed">
+          Bạn đang tìm kiếm một chiếc bánh thật ngon cho ngày sinh nhật của bé, một món quà bất ngờ cho người thân, hay đơn giản là một lát bánh tự thưởng cho bản thân sau ngày dài? Sweet Home luôn ở đây để phục vụ bạn! Được thành lập bởi những người yêu bánh tại thành phố Hồ Chí Minh, chúng tôi luôn chăm chút cho từng ổ bánh như làm cho chính người thân của mình.
+        </p>
+
+        {/* Feature cards */}
+        <div className="grid grid-cols-2 gap-3 mt-6">
+          <div className="bg-primary rounded-2xl p-4">
+            <p className="font-heading font-semibold text-primary-foreground text-sm">Bánh mới mỗi ngày</p>
+            <p className="text-primary-foreground/80 text-xs mt-1 leading-relaxed">Luôn đảm bảo độ tươi ngon nhất khi đến tay khách hàng.</p>
+          </div>
+          <div className="bg-accent/80 rounded-2xl p-4">
+            <p className="font-heading font-semibold text-foreground text-sm">Nguyên liệu sạch</p>
+            <p className="text-muted-foreground text-xs mt-1 leading-relaxed">Nguồn gốc rõ ràng, cam kết an toàn thực phẩm tuyệt đối.</p>
+          </div>
+          <div className="col-span-2 bg-secondary rounded-2xl p-4 flex items-center justify-between">
+            <div>
+              <p className="font-heading font-semibold text-foreground text-sm">Giá thành hợp lý</p>
+              <p className="text-muted-foreground text-xs mt-0.5">Mang giá trị cao cấp đến gần gia đình Việt.</p>
+            </div>
+            <Camera className="h-7 w-7 text-muted-foreground/50" />
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className="mt-8 text-center">
+          <p className="font-semibold text-sm text-foreground">Sự chân thành trong từng sản phẩm</p>
+          <p className="text-muted-foreground text-xs mt-2 italic leading-relaxed px-4">
+            "Đến với Sweet Home, bạn sẽ luôn tìm thấy sự ấm áp trong không gian và sự chân thành trong từng sản phẩm."
+          </p>
+        </div>
+
+        {/* Contact */}
+        <div className="mt-8 pb-10">
+          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-3">Contact us</p>
+          <h3 className="font-heading font-bold text-xl mb-4">Kết nối với chúng tôi</h3>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                <MapPin className="h-4 w-4 text-primary" />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide">Địa chỉ</p>
+                <p className="text-sm text-foreground">64 Lê Lợi, P. Bến Nghé, Q.1, TP. HCM</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Phone className="h-4 w-4 text-primary" />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide">Hotline</p>
+                <p className="text-sm text-foreground">0911 467 424</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
